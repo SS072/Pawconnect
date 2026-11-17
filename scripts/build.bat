@@ -14,7 +14,7 @@ if not exist "%BIN_DIR%" mkdir "%BIN_DIR%"
 
 dir /s /b "%SRC_DIR%\*.java" > "%BASE_DIR%\sources.txt"
 
-javac -d "%BIN_DIR%" @"%BASE_DIR%\sources.txt"
+javac -cp "%BASE_DIR%\lib\*" -d "%BIN_DIR%" @"%BASE_DIR%\sources.txt"
 
 if %ERRORLEVEL% equ 0 (
     echo [SUCCESS] Compilation completed without errors.

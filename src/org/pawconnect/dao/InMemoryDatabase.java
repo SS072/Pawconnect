@@ -112,4 +112,141 @@ public class InMemoryDatabase {
             "Dr. Sarah Jenkins, DVM", "2026-11-20"
         ));
     }
+
+    public List<Pet> searchPetsMemory(String query, String speciesFilter, String statusFilter) {
+        List<Pet> result = new ArrayList<>();
+        String q = (query != null) ? query.trim().toLowerCase() : "";
+
+        for (Pet p : pets) {
+            boolean matchesQuery = q.isEmpty() ||
+                p.getName().toLowerCase().contains(q) ||
+                p.getBreed().toLowerCase().contains(q) ||
+                (p.getDescription() != null && p.getDescription().toLowerCase().contains(q));
+
+            if (!matchesQuery) continue;
+
+            if (speciesFilter != null && !speciesFilter.equalsIgnoreCase("All")) {
+                if (!p.getSpecies().equalsIgnoreCase(speciesFilter.trim())) continue;
+            }
+
+            if (statusFilter != null && !statusFilter.equalsIgnoreCase("All")) {
+                if (!p.getAdoptionStatus().equalsIgnoreCase(statusFilter.trim())) continue;
+            }
+
+            result.add(p);
+        }
+        return result;
+    }
+
+    public boolean updatePetMemory(Pet pet) {
+        for (int i = 0; i < pets.size(); i++) {
+            if (pets.get(i).getId() == pet.getId()) {
+                pets.set(i, pet);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Pet findPetMemory(int id) {
+        for (Pet p : pets) {
+            if (p.getId() == id) return p;
+        }
+        return null;
+    }
+
+    public java.util.Map<String, Integer> getDashboardMetricsMemory() {
+        java.util.Map<String, Integer> map = new java.util.HashMap<>();
+        int total = pets.size();
+        int available = 0, adopted = 0, pending = 0, medical = 0;
+        for (Pet p : pets) {
+            String s = p.getAdoptionStatus();
+            if ("AVAILABLE".equalsIgnoreCase(s)) available++;
+            else if ("ADOPTED".equalsIgnoreCase(s)) adopted++;
+            else if ("PENDING".equalsIgnoreCase(s)) pending++;
+            else if ("MEDICAL_HOLD".equalsIgnoreCase(s)) medical++;
+        }
+        map.put("TOTAL", total);
+        map.put("AVAILABLE", available);
+        map.put("ADOPTED", adopted);
+        map.put("PENDING", pending);
+        map.put("MEDICAL_HOLD", medical);
+        return map;
+    }
+
+    public List<AdoptionApplication> getApplicationsByStatusMemory(String statusFilter) {
+        if (statusFilter == null || statusFilter.equalsIgnoreCase("All")) {
+            return new ArrayList<>(applications);
+        }
+        List<AdoptionApplication> result = new ArrayList<>();
+        for (AdoptionApplication a : applications) {
+            if (a.getStatus().name().equalsIgnoreCase(statusFilter.trim()) ||
+                a.getStatus().getDisplayLabel().equalsIgnoreCase(statusFilter.trim())) {
+                result.add(a);
+            }
+        }
+        return result;
+    }
+
+    public boolean processDecisionMemory(int applicationId, int petId, ApplicationStatus decision, String notes) {
+        AdoptionApplication targetApp = null;
+        for (AdoptionApplication a : applications) {
+            if (a.getId() == applicationId) {
+                targetApp = a;
+                break;
+            }
+        }
+        if (targetApp == null) return false;
+
+        targetApp.setStatus(decision);
+        targetApp.setReviewNotes(notes);
+
+        Pet pet = findPetMemory(petId);
+        if (pet != null) {
+            if (decision == ApplicationStatus.APPROVED) {
+                pet.setAdoptionStatus("ADOPTED");
+            } else if (decision == ApplicationStatus.REJECTED || decision == ApplicationStatus.WITHDRAWN) {
+                if (!"ADOPTED".equalsIgnoreCase(pet.getAdoptionStatus())) {
+                    pet.setAdoptionStatus("AVAILABLE");
+                }
+            }
+        }
+        return true;
+    }
+
+    public List<MedicalRecord> getMedicalRecordsForPetMemory(int petId) {
+        List<MedicalRecord> result = new ArrayList<>();
+        for (MedicalRecord r : medicalRecords) {
+            if (r.getPetId() == petId) result.add(r);
+        }
+        return result;
+    }
+
+    public User authenticateMemory(String username, String password) {
+        if (username == null) return null;
+        String uClean = username.trim().toLowerCase();
+        String pClean = (password != null) ? password.trim() : "";
+
+        if (uClean.equals("adopter") || uClean.equals("demo adopter") || uClean.equals("rahul") || uClean.equals("user")) {
+            if (pClean.isEmpty() || pClean.equals("user123") || pClean.equals("adopter") || pClean.equals("password")) {
+                return new User(2, "adopter", "Rahul Sharma", "ADOPTER");
+            }
+        }
+
+        if (uClean.equals("admin") || uClean.equals("demo admin") || uClean.equals("director") || uClean.equals("staff")) {
+            if (pClean.isEmpty() || pClean.equals("admin123") || pClean.equals("admin") || pClean.equals("password")) {
+                return new User(1, "admin", "Dr. Sarah Jenkins (Shelter Director)", "ADMIN");
+            }
+        }
+
+        for (User u : users) {
+            if (u.getUsername().equalsIgnoreCase(uClean)) return u;
+        }
+
+        if (uClean.contains("adopt")) {
+            return new User(2, "adopter", "Rahul Sharma", "ADOPTER");
+        }
+
+        return null;
+    }
 }
