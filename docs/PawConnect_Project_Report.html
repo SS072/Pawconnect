@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PAWS ADOPTION CENTER - MINOR PROJECT REPORT</title>
+<style>
+  @page {
+    size: A4;
+    margin: 25mm 20mm 25mm 20mm;
+  }
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    line-height: 1.6;
+    color: #111;
+    background: #fdfdfd;
+    margin: 0;
+    padding: 0;
+  }
+  .report-container {
+    max-width: 820px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  @media print {
+    body { background: transparent; }
+    .report-container { box-shadow: none; padding: 0; max-width: 100%; }
+    .page-break { border-top: none; margin-top: 0; padding-top: 0; }
+  }
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  .text-justify { text-align: justify; }
+  .uppercase { text-transform: uppercase; }
+  .bold { font-weight: bold; }
+  
+  h1.title-main {
+    font-size: 20pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  h2.title-sub {
+    font-size: 15pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+  }
+  h2.chapter-title {
+    font-size: 15pt;
+    font-weight: bold;
+    border-bottom: 2px solid #222;
+    padding-bottom: 6px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  h3.section-title {
+    font-size: 13pt;
+    font-weight: bold;
+    margin-top: 22px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 14px;
+    text-align: justify;
+  }
+  ul, ol {
+    margin-bottom: 16px;
+    padding-left: 28px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 11pt;
+  }
+  table, th, td {
+    border: 1px solid #333;
+  }
+  th {
+    background-color: #f2f2f2;
+    padding: 8px 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+  td {
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  .figure-box {
+    text-align: center;
+    margin: 24px 0;
+  }
+  .figure-box img {
+    max-width: 95%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .figure-caption {
+    font-size: 10.5pt;
+    font-weight: bold;
+    margin-top: 8px;
+    color: #333;
+  }
+  .cert-table {
+    width: 100%;
+    border: none;
+    margin-top: 100px;
+  }
+  .cert-table td {
+    border: none;
+    padding: 10px;
+    vertical-align: bottom;
+  }
+</style>
+</head>
+<body>
+
+<div class="report-container">
+
+  <!-- ==================== PAGE 1: TITLE PAGE ==================== -->
+  <div class="text-center" style="min-height: 900px; padding-top: 60px;">
+    <h1 class="title-main uppercase">PAWS ADOPTION CENTER</h1>
+    <h2 class="title-sub uppercase">MINOR PROJECT REPORT</h2>
+    
+    <p style="margin-top: 50px; font-size: 13pt;">By</p>
+    <p class="bold" style="font-size: 14pt; margin: 10px 0;">SAIMA SHAIKH (RA2511056010409)</p>
+    <p class="bold" style="font-size: 14pt; margin: 10px 0;">PRACHI KUMARI (RA2511036010010)</p>
+    
+    <p style="margin-top: 60px; font-size: 13pt;">Under the guidance of</p>
+    <p class="bold" style="font-size: 14pt;">Dr. M. Mercy Theresa</p>
+    
+    <p style="margin-top: 60px; font-style: italic; font-size: 12pt;">In partial fulfilment of the requirements for</p>
+    <p class="bold" style="font-size: 13pt;">21CSC206P – ADVANCED OBJECT ORIENTED AND PROGRAMMING</p>
+    
+    <p style="margin-top: 30px; font-size: 12pt;">Department of Computer Science and Engineering</p>
+    <p class="bold" style="font-size: 13pt; margin-top: 30px;">FACULTY OF ENGINEERING AND TECHNOLOGY<br>SCHOOL OF COMPUTING<br>SRM INSTITUTE OF SCIENCE AND TECHNOLOGY<br>KATTANKULATHUR</p>
+    
+    <p class="bold" style="font-size: 13pt; margin-top: 40px;">NOVEMBER 2026</p>
+  </div>
+
+  <!-- ==================== PAGE 2: BONAFIDE CERTIFICATE ==================== -->
+  <div class="page-break">
+    <div class="text-center">
+      <h3 class="bold" style="font-size: 14pt; margin-bottom: 4px;">SRM INSTITUTE OF SCIENCE AND TECHNOLOGY</h3>
+      <p style="font-size: 11pt; margin-bottom: 25px;">(Deemed to be University)</p>
+      <h2 class="bold" style="font-size: 15pt; text-decoration: underline; margin-bottom: 40px;">BONAFIDE CERTIFICATE</h2>
+    </div>
+
+    <p class="text-justify" style="font-size: 12pt; line-height: 2;">
+      Certified that this Minor Project Report entitled <strong>"Paws Adoption Center"</strong> is the bonafide work of 
+      <strong>SAIMA SHAIKH (RA2511056010409)</strong> and <strong>PRACHI KUMARI (RA2511027010010)</strong>, who 
+      carried out the project under my supervision in partial fulfilment of the requirements for 
+      <strong>21CSC206P – ADVANCED OBJECT ORIENTED AND PROGRAMMING</strong>.
+    </p>
+
+    <table class="cert-table">
+      <tr>
+        <td style="width: 50%;">
+          <p class="bold" style="margin-bottom: 50px;">SIGNATURE</p>
+          <p class="bold">Dr. M. Mercy Theresa</p>
+          <p>Project Supervisor / Assistant Professor<br>Department of Data Science and Business Systems<br>SRM Institute of Science and Technology<br>Kattankulathur</p>
+        </td>
+        <td style="width: 50%; text-align: right;">
+          <p class="bold" style="margin-bottom: 50px;">SIGNATURE</p>
+          <p class="bold">HOD</p>
+          <p>Head of the Department<br>Department of Data Science and Business Systems / CSE<br>SRM Institute of Science and Technology<br>Kattankulathur</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ==================== PAGE 3: ABSTRACT ==================== -->
+  <div class="page-break">
+    <h2 class="bold uppercase" style="font-size: 15pt; margin-bottom: 20px;">ABSTRACT</h2>
+    <p>
+      <strong>Paws Adoption Center</strong> is a robust Java desktop application designed to streamline and automate animal shelter operations and the pet adoption process. It provides separate, role-differentiated access for an <strong>Adopter</strong> and a <strong>Worker / Shelter Administrator</strong>. An adopter can view animals that are available, evaluate lifestyle compatibility through a multi-factor smart matching engine, and submit an adoption request for a selected pet. The adopter can also track the real-time status of submitted petitions under the My Requests section. A worker can add new pet details, inspect shelter census analytics, view pending adoption petitions, and approve or reject requests.
+    </p>
+    <p>
+      The application is developed using Java and Java Swing. Swing and AWT are used to create the screens, responsive card layouts, forms, and custom buttons running on the Event Dispatch Thread (EDT). A relational <strong>MySQL database (`pawconnect_db`)</strong> is utilized to store user credentials, comprehensive animal profiles, and adoption requests. <strong>JDBC (Java Database Connectivity)</strong> connects the Java application to MySQL using parameterized <code>PreparedStatement</code> objects to prevent SQL injection vulnerabilities and enforce database ACID transactions.
+    </p>
+    <p>
+      The project aims to make the adoption process transparent, structured, and manageable through an intuitive desktop interface. The system guarantees permanent data storage across application restarts, enforces referential integrity through foreign keys, and includes a resilient fallback architecture to ensure operational continuity.
+    </p>
+  </div>
+
+  <!-- ==================== PAGE 4: ACKNOWLEDGEMENT ==================== -->
+  <div class="page-break">
+    <h2 class="bold uppercase" style="font-size: 15pt; margin-bottom: 20px;">ACKNOWLEDGEMENT</h2>
+    <p>We express our heartfelt thanks to our honorable Vice Chancellor <strong>Dr. C. Muthamizhchelvan</strong>, for being the beacon in all our endeavors.</p>
+    <p>We would like to express our warmth of gratitude to our Registrar <strong>Dr. S. Ponnusamy</strong>, for his encouragement.</p>
+    <p>We express our profound gratitude to our Dean (College of Engineering and Technology) <strong>Dr. Leenus Jesus Martin M</strong>, for bringing out novelty in all executions.</p>
+    <p>We would like to express our heartfelt thanks to Chairperson, School of Computing <strong>Dr. Revathi Venkataraman</strong>, for imparting confidence to complete our course project.</p>
+    <p>We wish to express our sincere thanks to Course Audit Professor <strong>Dr. G. Senthilkumar</strong>, Professor, CINTEL for his constant encouragement and support.</p>
+    <p>We are highly thankful to our Course Project Faculty <strong>Dr. Mercy Theresa M</strong>, Assistant Professor, Department of Data Science and Business Systems, for her assistance, timely suggestions, and guidance throughout the duration of this course project.</p>
+    <p>We extend our gratitude to our HoD <strong>Dr. V. Kavitha</strong>, Professor, Department of Data Science and Business Systems, and our departmental colleagues for their support.</p>
+    <p>Finally, we thank our parents and friends near and dear ones who directly and indirectly contributed to the successful completion of our project. Above all, I thank the Almighty for showering his blessings on us to complete this course project.</p>
+  </div>
+
+  <!-- ==================== PAGE 5: TABLE OF CONTENTS ==================== -->
+  <div class="page-break">
+    <h2 class="bold uppercase" style="font-size: 15pt; margin-bottom: 20px;">TABLE OF CONTENTS</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%;">CHAPTER NO.</th>
+          <th style="width: 55%;">CONTENTS</th>
+          <th style="width: 20%;">PAGE NO.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td><strong>Bonafide Certificate</strong></td><td>2</td></tr>
+        <tr><td></td><td><strong>Abstract</strong></td><td>3</td></tr>
+        <tr><td></td><td><strong>Acknowledgement</strong></td><td>4</td></tr>
+        <tr><td><strong>1</strong></td><td><strong>INTRODUCTION</strong></td><td>5</td></tr>
+        <tr><td><strong>2</strong></td><td><strong>LITERATURE SURVEY</strong></td><td>7</td></tr>
+        <tr><td><strong>3</strong></td><td><strong>REQUIREMENT ANALYSIS</strong></td><td>8</td></tr>
+        <tr><td><strong>4</strong></td><td><strong>ARCHITECTURE AND DESIGN</strong></td><td>10</td></tr>
+        <tr><td><strong>5</strong></td><td><strong>IMPLEMENTATION</strong></td><td>15</td></tr>
+        <tr><td><strong>6</strong></td><td><strong>RESULTS AND ANALYSIS</strong></td><td>17</td></tr>
+        <tr><td><strong>7</strong></td><td><strong>CONCLUSION</strong></td><td>20</td></tr>
+        <tr><td><strong>8</strong></td><td><strong>REFERENCES</strong></td><td>21</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== PAGE 6: CHAPTER 1 ==================== -->
+  <div class="page-break">
+    <h2 class="chapter-title">CHAPTER 1 – INTRODUCTION</h2>
+    
+    <h3 class="section-title">1.1 Motivation</h3>
+    <p>Many people are interested in adopting pets, while animal shelters and adoption centres need a simple way to keep track of animals and adoption enquiries. When details are handled using separate notes or messages, it may become difficult to check which pets are available and which requests are waiting for a decision.</p>
+    <p>The motivation for this project is to demonstrate how a basic computer application can keep pet details and adoption requests in one place. It also gives a clear role to the adopter and the worker.</p>
+
+    <h3 class="section-title">1.2 Objective</h3>
+    <ul>
+      <li>To provide a login screen for the two available roles: Adopter and Worker.</li>
+      <li>To display pets whose status is Available.</li>
+      <li>To allow an adopter to submit an adoption request for a pet.</li>
+      <li>To allow an adopter to view the status of their requests.</li>
+      <li>To allow a worker to add pet details.</li>
+      <li>To allow a worker to approve or reject pending adoption requests.</li>
+      <li>To save user, pet, and request information permanently in a MySQL database.</li>
+    </ul>
+
+    <h3 class="section-title">1.3 Problem Statement</h3>
+    <p>The project addresses the basic problem of managing pet details and adoption requests in a small adoption centre. A worker needs to know which pets are available and which adoption requests are waiting for review. An adopter needs a way to see available pets and know whether a request is pending, approved or rejected. The application provides these basic operations through a desktop program.</p>
+
+    <h3 class="section-title">1.4 Challenges</h3>
+    <ul>
+      <li>Connecting a Java program to a MySQL database using JDBC.</li>
+      <li>Showing different screens based on the role of the logged-in user.</li>
+      <li>Keeping pet availability and request status updated atomically after a worker makes a decision.</li>
+      <li>Preventing the same adopter from sending duplicate requests for the same pet.</li>
+      <li>Validating that all required pet fields (name, breed, age) are verified before saving to the database.</li>
+    </ul>
+  </div>
+
+  <!-- ==================== PAGE 7: CHAPTER 2 ==================== -->
+  <div class="page-break">
+    <h2 class="chapter-title">CHAPTER 2 – LITERATURE SURVEY</h2>
+    <p>Pet adoption websites and shelter systems generally help people find animals that are looking for homes. They display information about animals and provide a way for interested people to contact the shelter or submit an adoption enquiry. This chapter briefly reviews genuine public examples. These systems are discussed only as background; the Paws Adoption Center project does not copy all their features.</p>
+
+    <h3 class="section-title">2.1 Existing Pet Adoption Platforms</h3>
+    <p><strong>Petfinder</strong> is an online platform that connects people looking to adopt pets with shelters and rescue organisations. Its help information explains how users can search for adoptable pets, view listings and contact the organisation responsible for a pet [1].</p>
+    <p><strong>Adopt a Pet</strong> also allows users to browse adoptable pets and contact shelters, rescues or people who are rehoming animals. Its website explains that the platform helps users discover pets and make enquiries to the organisations caring for them [2].</p>
+    <p>The <strong>American Society for the Prevention of Cruelty to Animals (ASPCA)</strong> provides information about adopting animals and finding local shelters. Its adoption guidance explains that adoption steps can differ between organisations [3].</p>
+
+    <h3 class="section-title">2.2 Need for a Simple Pet Adoption Management System</h3>
+    <p>Large public platforms provide many services, but a small adoption centre may need only a few basic functions. It may need to store pet details, receive adoption requests and allow a worker to make a decision. A small desktop application can demonstrate these operations without requiring an internet connection or costly cloud services.</p>
+
+    <h3 class="section-title">2.3 Comparison with the Proposed Project</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>Public adoption platforms</th>
+          <th>Paws Adoption Center</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Pet browsing</strong></td>
+          <td>Users can browse adoptable animals online.</td>
+          <td>Adopter can view pets marked Available.</td>
+        </tr>
+        <tr>
+          <td><strong>Adoption enquiry</strong></td>
+          <td>Users contact or apply through the platform or organisation.</td>
+          <td>Adopter sends an in-app request.</td>
+        </tr>
+        <tr>
+          <td><strong>Request review</strong></td>
+          <td>Handled by the shelter or rescue organisation.</td>
+          <td>Worker approves or rejects a request.</td>
+        </tr>
+        <tr>
+          <td><strong>Storage</strong></td>
+          <td>Platform-managed online services.</td>
+          <td>Local MySQL database with JDBC.</td>
+        </tr>
+        <tr>
+          <td><strong>Scope</strong></td>
+          <td>Public-facing services with wider features.</td>
+          <td>Dedicated desktop management project.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The proposed project focuses on a clear workflow that is suitable for learning and demonstration. It is designed to provide robust local shelter operations.</p>
+  </div>
+
+  <!-- ==================== PAGE 8 & 9: CHAPTER 3 ==================== -->
+  <div class="page-break">
+    <h2 class="chapter-title">CHAPTER 3 – REQUIREMENT ANALYSIS</h2>
+    
+    <h3 class="section-title">3.1 Requirement Analysis</h3>
+    <p>Requirement analysis means identifying what the application must do and what is needed to run it. Based on the source code and documentation, the project requires Java, the MySQL JDBC driver library, and the application files. The database is initialized using a structured SQL script.</p>
+
+    <h3 class="section-title">3.2 Hardware Requirements</h3>
+    <p>The application needs a computer capable of running a supported Java Development Kit (JDK) and a desktop graphical interface. Standard hardware specifications include an Intel Core i3 or equivalent processor, 2 GB RAM minimum, and 150 MB free disk space.</p>
+
+    <h3 class="section-title">3.3 Software Requirements</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Software / Component</th>
+          <th>Purpose / Evidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Java Development Kit (JDK)</strong></td>
+          <td>Used to compile and run the Java source code (JDK 17 or higher, tested on JDK 26).</td>
+        </tr>
+        <tr>
+          <td><strong>Java Swing and AWT</strong></td>
+          <td>Used to create the desktop screens, cards, and interface elements; imported in view classes.</td>
+        </tr>
+        <tr>
+          <td><strong>MySQL Database</strong></td>
+          <td>Stores users, pets, adoption applications, and medical logs in <code>pawconnect_db</code>.</td>
+        </tr>
+        <tr>
+          <td><strong>JDBC Driver</strong></td>
+          <td>Connects Java to MySQL using <code>mysql-connector-j-26.7.0.jar</code> located in the lib folder.</td>
+        </tr>
+        <tr>
+          <td><strong>Windows batch files</strong></td>
+          <td><code>build.bat</code> and <code>run.bat</code> provide automated compilation and launch options.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-title">3.4 Functional Requirements</h3>
+    <ul>
+      <li>The application must show a login screen with role options for Adopter and Worker.</li>
+      <li>The application must identify the role of the account after checking the username and password.</li>
+      <li>The adopter must be able to view available pets.</li>
+      <li>The adopter must be able to send an adoption request.</li>
+      <li>The adopter must be able to view their own request statuses.</li>
+      <li>The worker must be able to view pending requests.</li>
+      <li>The worker must be able to approve or reject a selected request.</li>
+      <li>The worker must be able to add a pet by entering its name, type and age.</li>
+      <li>The application must permanently store information in the MySQL database.</li>
+    </ul>
+
+    <h3 class="section-title">3.5 Non-Functional Requirements</h3>
+    <ul>
+      <li><strong>Usability:</strong> Clean, responsive Swing cards and buttons styled with cohesive visual themes.</li>
+      <li><strong>Persistent Storage:</strong> Permanent relational storage managed through MySQL and JDBC.</li>
+      <li><strong>Maintainability:</strong> Modular MVC architecture separating views, controllers, and DAOs.</li>
+      <li><strong>Input Checking:</strong> Add Pet dialog validates required text fields and non-negative age values.</li>
+      <li><strong>Portability:</strong> Standard Java code portable across Windows, macOS, and Linux environments.</li>
+    </ul>
+  </div>
+
+  <!-- ==================== PAGE 10-14: CHAPTER 4 ==================== -->
+  <div class="page-break">
+    <h2 class="chapter-title">CHAPTER 4 – ARCHITECTURE AND DESIGN</h2>
+    
+    <h3 class="section-title">4.1 System Architecture</h3>
+    <p>The application is architected into three main tiers: the User Interface (Swing screens), the Controller logic, and the Data Access Layer (DAOs) communicating with the MySQL database.</p>
+    
+    <div class="figure-box">
+      <div style="border: 1px solid #333; padding: 15px; display: inline-block; background: #fafafa;">
+        <strong>[ Adopter / Worker ]</strong> &rarr; 
+        <strong>[ Java Swing Screens (View) ]</strong> &rarr; 
+        <strong>[ DAO Layer (PreparedStatement) ]</strong> &rarr; 
+        <strong>[ MySQL Database (pawconnect_db) ]</strong>
+      </div>
+      <div class="figure-caption">Figure 4.1: Basic architecture of Paws Adoption Center</div>
+    </div>
+
+    <h3 class="section-title">4.2 Application Workflow</h3>
+    <p>When the program starts, it loads the JDBC driver and displays the login screen. The entered username and password are checked against the users table. If the role is Adopter, the adopter screen is opened. If the role is Worker, the worker screen is opened. If credentials do not match, an error message is shown.</p>
+
+    <h3 class="section-title">4.3 Database Design</h3>
+    <p>The application uses a relational MySQL database named <code>pawconnect_db</code>. The schema creates four tables:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Table</th>
+          <th>Fields created by the source</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>users</strong></td>
+          <td>id, username, password, full_name, role</td>
+          <td>Stores login accounts and user role permissions.</td>
+        </tr>
+        <tr>
+          <td><strong>pets</strong></td>
+          <td>id, name, species, breed, age_months, gender, size, status, health_status</td>
+          <td>Stores animal inventory and adoption availability.</td>
+        </tr>
+        <tr>
+          <td><strong>adoption_applications</strong></td>
+          <td>id, pet_id, applicant_name, contact_phone, contact_email, housing_type, status, notes</td>
+          <td>Stores adoption petitions and adjudication status.</td>
+        </tr>
+        <tr>
+          <td><strong>medical_records</strong></td>
+          <td>id, pet_id, record_date, record_type, title, description, veterinarian</td>
+          <td>Stores vaccination and veterinary clinical logs.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-title">4.4 Logical Relationship</h3>
+    <p>The <code>id</code> field is the primary key in each table. The <code>adoption_applications</code> and <code>medical_records</code> tables maintain foreign key references to <code>pets(id)</code> with <code>ON DELETE CASCADE</code> constraints.</p>
+
+    <h3 class="section-title">4.5 Explanation of Main Components</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Simple explanation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Login screen</strong></td>
+          <td>Accepts credentials and opens the portal for the matching role.</td>
+        </tr>
+        <tr>
+          <td><strong>Adopter screen</strong></td>
+          <td>Shows Available Pets, Smart Compatibility Matcher, and My Requests.</td>
+        </tr>
+        <tr>
+          <td><strong>Worker screen</strong></td>
+          <td>Shows Operations Dashboard, Manage Pet Inventory, and Pending Requests Queue.</td>
+        </tr>
+        <tr>
+          <td><strong>DatabaseConnection</strong></td>
+          <td>Centralized class loading JDBC driver and managing MySQL connections.</td>
+        </tr>
+        <tr>
+          <td><strong>PetDAO</strong></td>
+          <td>Executes full CRUD operations (Create, Read, Update, Delete) on pets.</td>
+        </tr>
+        <tr>
+          <td><strong>ApplicationDAO</strong></td>
+          <td>Handles application submissions and transactional approval decisions.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ==================== PAGE 15 & 16: CHAPTER 5 ==================== -->
+  <div class="page-break">
+    <h2 class="chapter-title">CHAPTER 5 – IMPLEMENTATION</h2>
+    
+    <h3 class="section-title">5.1 Technologies Used</h3>
+    <p>Java is the core programming language. Java Swing and AWT provide the graphical controls, layouts, and event dispatching. MySQL is the relational database engine, and the MySQL Connector/J driver enables JDBC communication via parameterized queries.</p>
+
+    <h3 class="section-title">5.2 Login System</h3>
+    <p>The login screen presents role-selection buttons and credentials input fields. The credentials are verified against the users table. Demonstration accounts are provided:</p>
+    <table>
+      <thead>
+        <tr><th>Role</th><th>Username</th><th>Password</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Adopter</td><td>adopter</td><td>adopter123</td></tr>
+        <tr><td>Worker / Admin</td><td>admin</td><td>admin123</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-title">5.3 Adopter Section</h3>
+    <p>The adopter screen contains Available Pets, Smart Match, and My Requests. Available Pets displays animals whose status is Available using custom visual cards. A Request Adoption button allows immediate petition submission.</p>
+
+    <h3 class="section-title">5.4 Worker Section</h3>
+    <p>The worker screen contains Operations Dashboard, Manage Inventory, and Review Petitions Queue. The worker selects a petition and chooses Approve or Reject. When approved, the pet status is automatically set to Adopted.</p>
+
+    <h3 class="section-title">5.5 Adding and Displaying Pets</h3>
+    <p>The Add Pet form asks for name, species, breed, age in months, and behavioral compatibility. Validation ensures required fields are entered before inserting into the database.</p>
+
+    <h3 class="section-title">5.6 Adoption Request Approval and Rejection</h3>
+    <p>When a worker approves a request, an atomic JDBC transaction updates the application status to Approved and the corresponding pet's status to Adopted.</p>
+
+    <h3 class="section-title">5.7 Database Operations</h3>
+    <p><code>DatabaseConnection.java</code> reads configuration parameters from <code>db.properties</code>. All SQL statements use <code>PreparedStatement</code> to guarantee type safety and SQL injection defense.</p>
+  </div>
+
+  <!-- ==================== PAGE 17-19: CHAPTER 6 ==================== -->
+  <div class="page-break">
+    <h2 class="chapter-title">CHAPTER 6 – RESULTS AND ANALYSIS</h2>
+    <p>This chapter presents the actual operational screens captured from the running application and verifies the test plan.</p>
+
+    <h3 class="section-title">6.1 Application Screens</h3>
+
+    <div class="figure-box">
+      <img src="screenshots/01_login_screen.png" alt="Login Screen">
+      <div class="figure-caption">Figure 6.1: Login Screen (Role switching and credential fields)</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="screenshots/02_adopter_available_pets.png" alt="Adopter Available Pets">
+      <div class="figure-caption">Figure 6.2: Adopter – Available Pets Catalog (Pet cards, breeds, and status badges)</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="screenshots/03_adopter_smart_match.png" alt="Smart Matcher">
+      <div class="figure-caption">Figure 6.3: Adopter – Smart Compatibility Matcher (Lifestyle questionnaire and scoring)</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="screenshots/04_adopter_my_applications.png" alt="My Applications">
+      <div class="figure-caption">Figure 6.4: Adopter – My Requests / Status Tracker (Real-time tracking of petitions)</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="screenshots/05_admin_dashboard.png" alt="Admin Dashboard">
+      <div class="figure-caption">Figure 6.5: Worker – Shelter Operations & Census Dashboard (Real-time metric counters)</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="screenshots/06_admin_pet_inventory.png" alt="Admin Pet Inventory">
+      <div class="figure-caption">Figure 6.6: Worker – Manage Pet Inventory (Search, status filters, and Add Pet button)</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="screenshots/07_admin_application_queue.png" alt="Pending Requests">
+      <div class="figure-caption">Figure 6.7: Worker – Pending Requests Queue (Adjudication and review actions)</div>
+    </div>
+
+    <div class="figure-box">
+      <img src="screenshots/09_worker_add_pet_dialog.png" alt="Add Pet Dialog">
+      <div class="figure-caption">Figure 6.8: Worker – Add Pet Intake Dialog (Form fields and validation)</div>
+    </div>
+
+    <h3 class="section-title">6.2 Test Plan and Execution Status</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Test ID</th>
+          <th>Test Action</th>
+          <th>Expected Result from Code</th>
+          <th>Execution Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>T01</td><td>Login using adopter credentials</td><td>Adopter screen opens with adoptable pets</td><td><strong>PASSED</strong></td></tr>
+        <tr><td>T02</td><td>Login using worker credentials</td><td>Worker operations dashboard opens</td><td><strong>PASSED</strong></td></tr>
+        <tr><td>T03</td><td>Enter incorrect credentials</td><td>Login error dialog appears</td><td><strong>PASSED</strong></td></tr>
+        <tr><td>T04</td><td>Filter pets by species ("Dog")</td><td>List displays only canine records</td><td><strong>PASSED</strong></td></tr>
+        <tr><td>T05</td><td>Submit Add Pet intake form</td><td>New animal saved to database</td><td><strong>PASSED</strong></td></tr>
+        <tr><td>T06</td><td>Execute compatibility matcher</td><td>Algorithmic ranked scores displayed</td><td><strong>PASSED</strong></td></tr>
+        <tr><td>T07</td><td>Approve a pending request</td><td>Request Approved and pet marked Adopted</td><td><strong>PASSED</strong></td></tr>
+        <tr><td>T08</td><td>Reject a pending request</td><td>Request status changed to Rejected</td><td><strong>PASSED</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="section-title">6.3 Analysis</h3>
+    <p>The test results demonstrate that the application successfully executes all functional requirements. Data is reliably persisted in the MySQL database across restarts, ensuring complete operational fidelity.</p>
+  </div>
+
+  <!-- ==================== PAGE 20 & 21: CHAPTER 7 & 8 ==================== -->
+  <div class="page-break">
+    <h2 class="chapter-title">CHAPTER 7 – CONCLUSION</h2>
+    <p>Paws Adoption Center is an efficient Java Swing desktop application for managing pet adoption logistics. It provides separate, structured portals for adopters and workers, ensuring smooth shelter coordination and permanent record keeping via MySQL JDBC.</p>
+
+    <h3 class="section-title">7.1 Limitations</h3>
+    <ul>
+      <li>The application runs locally on the desktop rather than as a multi-device mobile app.</li>
+      <li>Demonstration accounts use plain password verification; hashing can be added for enterprise security.</li>
+      <li>Pet images are represented by vector icons rather than external image uploads.</li>
+    </ul>
+
+    <h3 class="section-title">7.2 Future Improvements</h3>
+    <ul>
+      <li>Add registration and password self-reset features for new adopters.</li>
+      <li>Implement secure BCrypt password hashing.</li>
+      <li>Add file upload capabilities for pet photographs and medical documents.</li>
+      <li>Develop REST API endpoints for web and mobile client integration.</li>
+    </ul>
+
+    <h2 class="chapter-title" style="margin-top: 50px;">CHAPTER 8 – REFERENCES</h2>
+    <ol>
+      <li>Petfinder, "Petfinder FAQs: How It Works, Who We Are, and How to Get Help." https://www.petfinder.com/adopt-or-get-involved/about-petfinder/faqs/ (Accessed: Nov. 2026).</li>
+      <li>Adopt a Pet, "Using Our Site – How It Works." https://www.adoptapet.com/using-our-site (Accessed: Nov. 2026).</li>
+      <li>ASPCA, "Navigating: Finding and Welcoming Home Your Pet." https://www.aspca.org/adopt-pet/adoption-tips (Accessed: Nov. 2026).</li>
+      <li>Oracle, "Creating a GUI With Swing – The Java Tutorials." https://docs.oracle.com/javase/tutorial/uiswing/ (Accessed: Nov. 2026).</li>
+      <li>Oracle, "JDBC Database Access – The Java Tutorials." https://docs.oracle.com/javase/tutorial/jdbc/ (Accessed: Nov. 2026).</li>
+      <li>MySQL AB & Oracle, "MySQL Connector/J Developer Guide." https://dev.mysql.com/doc/connector-j/en/ (Accessed: Nov. 2026).</li>
+      <li>Paws Adoption Center GitHub Repository: https://github.com/SS072/Pawconnect (Accessed: Nov. 2026).</li>
+    </ol>
+  </div>
+
+</div>
+
+</body>
+</html>
